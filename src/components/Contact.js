@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   ContactIconAndValue,
   SectionHeading,
@@ -12,7 +12,7 @@ import toast from "react-hot-toast";
 export default function Contact() {
   const [state, handleSubmit] = useForm("xbjerkdw");
   if (state.succeeded) {
-   toast.success("Form submitted successfully");
+    toast.success("Form submitted successfully");
   }
   return (
     <div className="flex flex-col h-fit md:h-fit justify-center items-center gap-10 padding">
@@ -22,16 +22,14 @@ export default function Contact() {
         subHead="connect"
         tracking={"tracking-[15px] sm:tracking-[23px]"}
       />
-      <div className="relative flex flex-1  flex-col md:flex-row justify-between gap-10">
+      <div className="w-full max-w-[1100px] relative flex flex-1  flex-col md:flex-row justify-between gap-10">
         <div className="w-full h-full absolute top-0 right-0" />
         <div className="flex flex-col w-fit sm:w-[40%] gap-4">
           <div className="w-fit">
             <TextWhiteMedium text="Dont be Shy !" />
           </div>
           <p className="text-white font-medium text-base md:text-lg">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            everss.
+            Have a question? I&apos;d love to hear from you!
           </p>
           <div>
             {" "}
@@ -45,7 +43,7 @@ export default function Contact() {
             <ContactIconAndValue
               icon={<CallIconYellow />}
               title="Call me"
-              value={"+91 7034823906 / +91 9745874906"}
+              value={"+91 9745874906 / +91 7034823906"}
             />
           </div>
         </div>

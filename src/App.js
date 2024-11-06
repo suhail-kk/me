@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import About from "./components/About";
-import Contact from "./components/Contact";
-import Experiances from "./components/Experiances";
+import Works from "./components/works";
 import Footer from "./components/Footer";
 import Header from "./components/header";
-import Landing from "./components/Landing";
 import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import Landing from "./components/Landing";
+import Articles from "./components/Articles";
+import Experiances from "./components/Experiances";
 import SocialMedia from "./components/SocialMedia";
-import Works from "./components/works";
 
 function App() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <main>
       <section>
@@ -29,12 +37,13 @@ function App() {
         <Skills />
       </section>
       <section id="experiance-education">
-        <Experiances/>
+        <Experiances />
       </section>
       <section id="works">
-        <div className="flex flex-col  justify-center items-center gap-10 padding">
-          <Works />
-        </div>
+        <Works />
+      </section>
+      <section id="articles">
+        <Articles />
       </section>
       <section id="contact">
         <Contact />
@@ -43,7 +52,7 @@ function App() {
         <SocialMedia />
       </section>
       <section id="footer">
-        <Footer/>
+        <Footer />
       </section>
     </main>
   );
