@@ -28,7 +28,7 @@ export default function SocialMedia() {
           </div>
         </a>
 
-        <a href="https://wa.me/+919745874906" target="_blank">
+        <a href="https://wa.me/+919745874906" target="_blank" rel="noreferrer">
           <div>
             <SocialLinks icon={<WhatsappIcon />} />
           </div>

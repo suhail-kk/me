@@ -2,18 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* @font-face {
   font-family: 'MyFont';
   src: local('MyFont'), url(../public/assets/fonts/centauri.ttf);
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&display=swap");
 
 body {
   @apply m-0 bg-black;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -70,7 +68,7 @@ body {
   backdrop-filter: blur(12px);
 }
 
-.centauri-font{
+.centauri-font {
   font-family: MyFont;
 }
 
@@ -82,32 +80,32 @@ body {
   transform: scale(1.2);
 }
 
-.pulse:hover{
-  background: #FFC000;
+.pulse:hover {
+  background: #ffc000;
   border-radius: 50%;
-  color: #FFF;
+  color: #fff;
   font-size: 20px;
   text-align: center;
   line-height: 100px;
   font-family: sans-serif;
   text-transform: uppercase;
   animation: animate-pulse 3s linear infinite;
-  cursor: pointer
+  cursor: pointer;
 }
-@keyframes animate-pulse{
-  0%{
-      box-shadow: 0 0 0 0 #FFC000,  0 0 0 0 #FFC000;
+@keyframes animate-pulse {
+  0% {
+    box-shadow: 0 0 0 0 #ffc000, 0 0 0 0 #ffc000;
   }
-  40%{
-      box-shadow: 0 0 0 20px rgba(255,109,74,0.0),  0 0 0 0 #FFC000;
+  40% {
+    box-shadow: 0 0 0 20px rgba(255, 109, 74, 0), 0 0 0 0 #ffc000;
   }
-  80%{
-      box-shadow: 0 0 0 20px rgba(255,109,74,0.0),  0 0 0 20px rgba(255,109,74,0);
+  80% {
+    box-shadow: 0 0 0 20px rgba(255, 109, 74, 0),
+      0 0 0 20px rgba(255, 109, 74, 0);
   }
-  100%{
-      box-shadow: 0 0 0 0 rgba(255,109,74,0.0),  0 0 0 20px rgba(255,109,74,0);
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 20px rgba(255, 109, 74, 0);
   }
-  
 }
 
 .hover-underline-animation {
@@ -117,7 +115,7 @@ body {
 }
 
 .hover-underline-animation:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -233,9 +231,21 @@ body {
   color: #aaaaaa;
 }
 
-#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+#carousel-1:checked
+  ~ .control-1
+  ~ .carousel-indicators
+  li:nth-child(1)
+  .carousel-bullet,
+#carousel-2:checked
+  ~ .control-2
+  ~ .carousel-indicators
+  li:nth-child(2)
+  .carousel-bullet,
+#carousel-3:checked
+  ~ .control-3
+  ~ .carousel-indicators
+  li:nth-child(3)
+  .carousel-bullet {
   color: #428bca;
 }
 
@@ -247,11 +257,81 @@ body {
   text-align: center;
   font-size: 27px;
   color: rgba(255, 255, 255, 1);
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   z-index: 9999;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33),
+    -1px 0px 2px rgba(255, 255, 255, 0);
 }
 
-.image-hover-style{
+.image-hover-style {
   @apply grayscale hover:grayscale-0 transition ease-in-out delay-150  hover:scale-100 duration-300 hover:border-4 border-primaryYellow;
+}
+
+.container-card {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(71deg, #080509, #1a171c, #080509);
+  background-clip: padding-box;
+  border-radius: 12px;
+  padding: 20px;
+  img {
+    margin-bottom: 32px;
+  }
+}
+
+.bg-yellow-box {
+  position: relative;
+}
+
+.bg-yellow-box::after {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  content: "";
+  z-index: -1;
+  border-radius: 12px;
+}
+
+.bg-yellow-box::after {
+  background: linear-gradient(71deg, #0d1212, #ffc000, #0d1212);
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease;
+  box-shadow: 10px 10px 20px -10px #eceae6;
+}
+.card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-body {
+  height: 247px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.tag {
+  border-radius: 50px;
+  font-size: 12px;
+  margin: 0;
+  color: #fff;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.ant-modal-content {
+  padding: 0px !important;
 }

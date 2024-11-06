@@ -114,6 +114,26 @@ export const SkillsIcon = () => {
   );
 };
 
+export const ArticlesIcon = () => {
+  return (
+    <svg
+      width="28"
+      height="25"
+      viewBox="0 0 28 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 3H25V21H3V3ZM5 5V19H23V5H5ZM9 8H19V10H9V8ZM9 12H14V14H9V12ZM9 16H12V18H9V16Z"
+        stroke="white"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+
 export const MailIcon = () => {
   return (
     <svg
