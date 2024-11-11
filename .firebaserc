@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "portfolio-9bfc8"
+  },
+  "targets": {
+    "portfolio-9bfc8": {
+      "hosting": {
+        "suhailkk": [
+          "suhailkk"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

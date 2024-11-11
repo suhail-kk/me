@@ -1,0 +1,23 @@
+{
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "site": "suhailkk",
+    "hosting": [
+    {
+      "target": "suhailkk",
+      "public": "suhailkk/public"
+    }
+  ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "./public/index.html"
+      }
+    ]
+  }
+}
